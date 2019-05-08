@@ -1,5 +1,6 @@
 require 'sinatra'
-
+require './day'
+  
 get '/' do
-    'goodbye, world!'
+    "Hello, world! Happy #{day_of_the_week(Time.now)}."
 end
