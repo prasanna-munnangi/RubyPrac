@@ -33,3 +33,32 @@ puts [1, 2, 3, 4 ,5, 6, 7, 8].select { |n| n.even? }.inspect
 # symbol-to-proc notation
 
 puts (1..8).select(&:even?).inspect
+
+
+# reduce 
+
+numbers = 1..10
+
+def functional_sum(numbers)
+    numbers.reduce(0) { |total, n| total += n }
+end
+
+puts functional_sum(numbers)
+
+# return an array with keys as the states and values as the length of the states
+
+def states_length(states)
+    states.reduce({})  do  |result, state|
+        result[state] = state.length
+        result
+    end 
+end
+
+# this doesnt work
+def states_length_1(states)
+    states.reduce({}) { |result, state|   result[state] = state.length }
+end
+
+puts states.inspect
+puts states_length(states)
+puts states_length_1(states)
