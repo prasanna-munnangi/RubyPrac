@@ -61,4 +61,19 @@ end
 
 puts states.inspect
 puts states_length(states)
-puts states_length_1(states)
+# puts states_length_1(states)
+
+
+# function that returns the product of all the elements in an array.
+
+numbers = 1..5
+
+def product_numbers(numbers)
+    numbers.reduce(1) do |result, number|
+        result *= number
+        result
+    end
+end
+
+puts product_numbers(numbers)
+
