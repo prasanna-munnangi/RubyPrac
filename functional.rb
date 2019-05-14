@@ -54,8 +54,9 @@ def states_length(states)
     end 
 end
 
+# this doesnt work
 def states_length_1(states)
-    states.reduce({}) { |result, state| result[state] = state.length }
+    states.reduce({}) { |result, state|   result[state] = state.length }
 end
 
 puts states.inspect
